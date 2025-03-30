@@ -1,16 +1,18 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "declaration": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["dom", "es2015"],
     "jsx": "react",
-    "baseUrl": "./",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "baseUrl": "src",
     "paths": {
-      "@@/*": [".dumi/tmp/*"],
-      "kc-components": ["src"],
-      "kc-components/*": ["src/*", "*"]
-    }
+      "@/*": ["./*"]
+    },
+    "esModuleInterop": true,
+    "experimentalDecorators": true
   },
   "include": [".dumirc.ts", "src/**/*"]
 }

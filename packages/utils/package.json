@@ -1,7 +1,7 @@
 {
-  "name": "@kc-components/basic",
+  "name": "@kc-components/utils",
   "version": "1.0.0",
-  "description": "基础组件",
+  "description": "通用方法",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
@@ -9,16 +9,12 @@
   "files": [
     "dist"
   ],
-  "keywords": [],
+  "keywords": [
+    "util"
+  ],
   "author": "kincy <bill714@foxmail.com>",
-  "license": "MIT",
-  "packageManager": "pnpm@10.7.0",
-  "dependencies": {
-    "antd": "^5.24.5",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
   "homepage": "https://github.com/Jackson-Mseven/kc-components#readme",
+  "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmmirror.com/"
   },
