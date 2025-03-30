@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+
+    "paths": {
+      "@/*": ["src/*"],
+      "antd": ["node_modules/antd/es"],
+      "@utils/*": ["../../utils/*"]
+    },
+
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "skipLibCheck": true,
+    "types": ["react", "react-dom"],
+
+    "strict": true,
+    "noImplicitAny": false,
+    "forceConsistentCasingInFileNames": true,
+
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    "sourceMap": true,
+    "inlineSources": true
+  },
+
+  /* 文件范围控制 */
+  "include": ["src/**/*.ts", "src/**/*.tsx", "types/**/*.d.ts"],
+  "exclude": ["node_modules", "dist", "**/__tests__/*"]
+}
