@@ -14,7 +14,7 @@
     "commit": "git add . && git cz",
     "clean": "lerna clean --yes",
     "lv": "lerna version",
-    "lp": "lerna publish from-git"
+    "lp": "lerna publish from-git --access public"
   },
   "commitlint": {
     "extends": [

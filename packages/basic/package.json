@@ -41,5 +41,6 @@
     "rollup-plugin-terser": "^7.0.2",
     "typescript": "^5.8.2"
   },
-  "packageManager": "pnpm@10.7.0"
+  "packageManager": "pnpm@10.7.0",
+  "gitHead": "adb73d06b7fd69e86942e6c30d744be394dbe3a1"
 }
