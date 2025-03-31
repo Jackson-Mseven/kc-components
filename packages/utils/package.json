@@ -1,32 +1,29 @@
 {
   "name": "@kc-components/utils",
-  "version": "1.0.0",
+  "version": "1.0.1-alpha.0",
   "description": "通用方法",
-  "main": "dist/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
-  "sideEffects": false,
-  "files": [
-    "es",
-    "lib",
-    "dist"
-  ],
   "keywords": [
     "util"
   ],
-  "author": "kincy <bill714@foxmail.com>",
   "homepage": "https://github.com/Jackson-Mseven/kc-components#readme",
-  "license": "MIT",
-  "publishConfig": {
-    "registry": "https://registry.npmmirror.com/"
+  "bugs": {
+    "url": "https://github.com/Jackson-Mseven/kc-components/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jackson-Mseven/kc-components.git"
   },
-  "bugs": {
-    "url": "https://github.com/Jackson-Mseven/kc-components/issues"
-  },
+  "license": "MIT",
+  "author": "kincy <bill714@foxmail.com>",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "es",
+    "lib",
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c"
   },
@@ -36,5 +33,8 @@
     "@rollup/plugin-typescript": "^12.1.2",
     "rollup": "^4.38.0",
     "rollup-plugin-terser": "^7.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
   }
 }
