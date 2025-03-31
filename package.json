@@ -13,7 +13,7 @@
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "commit": "git add . && git cz",
     "clean": "lerna clean --yes",
-    "publish": "lerna publish"
+    "lp": "lerna publish from-git"
   },
   "commitlint": {
     "extends": [
