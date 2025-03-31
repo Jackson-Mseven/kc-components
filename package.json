@@ -4,14 +4,16 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "dumi dev",
-    "build": "concurrently 'lerna run build' --prefix-colors cyan,yellow",
+    "build": "lerna run build",
     "docs:build": "dumi build",
     "docs:preview": "dumi preview",
     "prepare": "husky install && dumi setup",
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-    "commit": "git add . && git cz"
+    "commit": "git add . && git cz",
+    "clean": "lerna clean --yes",
+    "publish": "lerna publish"
   },
   "commitlint": {
     "extends": [
