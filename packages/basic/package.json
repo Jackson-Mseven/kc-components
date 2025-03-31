@@ -1,6 +1,6 @@
 {
   "name": "@kc-components/basic",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "基础组件",
   "keywords": [],
   "homepage": "https://github.com/Jackson-Mseven/kc-components#readme",
@@ -24,9 +24,6 @@
     "dist",
     "types"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "build": "rollup -c"
   },
@@ -45,5 +42,8 @@
     "typescript": "^5.8.2"
   },
   "packageManager": "pnpm@10.7.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "gitHead": "adb73d06b7fd69e86942e6c30d744be394dbe3a1"
 }
