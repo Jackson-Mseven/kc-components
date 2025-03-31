@@ -24,6 +24,9 @@
     "dist",
     "types"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "rollup -c"
   },
