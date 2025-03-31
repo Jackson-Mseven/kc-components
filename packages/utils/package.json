@@ -35,6 +35,8 @@
     "rollup-plugin-terser": "^7.0.2"
   },
   "publishConfig": {
-    "access": "public"
-  }
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "gitHead": "74b9ea8dcb0c435d608cd62d74c05317a3feec1d"
 }

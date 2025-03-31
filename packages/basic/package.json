@@ -43,7 +43,8 @@
   },
   "packageManager": "pnpm@10.7.0",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
-  "gitHead": "adb73d06b7fd69e86942e6c30d744be394dbe3a1"
+  "gitHead": "74b9ea8dcb0c435d608cd62d74c05317a3feec1d"
 }
