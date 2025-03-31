@@ -5,17 +5,9 @@
     "moduleResolution": "node",
     "baseUrl": ".",
 
-    "paths": {
-      "@/*": ["src/*"],
-      "antd": ["node_modules/antd/es"],
-      "@utils/*": ["../../utils/*"]
-    },
-
     "jsx": "react-jsx",
     "jsxImportSource": "react",
 
-    "declaration": true,
-    "declarationDir": "dist/types",
     "skipLibCheck": true,
     "types": ["react", "react-dom"],
 
