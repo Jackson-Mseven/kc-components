@@ -1,6 +1,6 @@
 {
   "name": "@kc-components/utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "通用方法",
   "keywords": [
     "util"
@@ -17,8 +17,8 @@
   "author": "kincy <bill714@foxmail.com>",
   "sideEffects": false,
   "main": "lib/index.js",
-  "module": "es/index.js",
   "unpkg": "dist/index.min.js",
+  "module": "es/index.js",
   "types": "es/index.d.ts",
   "files": [
     "es",
