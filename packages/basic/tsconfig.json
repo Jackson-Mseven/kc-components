@@ -4,6 +4,9 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "baseUrl": ".",
+    "paths": {
+      "@kc-components/*": ["packages/*/src"]
+    },
 
     "jsx": "react-jsx",
     "jsxImportSource": "react",
