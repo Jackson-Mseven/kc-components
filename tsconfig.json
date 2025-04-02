@@ -1,18 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "lib": ["dom", "es2015"],
-    "jsx": "react",
     "sourceMap": true,
     "strict": true,
     "noImplicitAny": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@kc-components/*": ["packages/*/src"]
     },
     "esModuleInterop": true,
     "experimentalDecorators": true
   },
-  "include": [".dumirc.ts", "src/**/*"]
+  "include": [".dumirc.ts", "packages/**/*.{ts,tsx}"]
 }

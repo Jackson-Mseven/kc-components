@@ -15,19 +15,21 @@
   "author": "kincy <bill714@foxmail.com>",
   "sideEffects": false,
   "main": "lib/index.js",
-  "unpkg": "dist/antd.min.js",
-  "module": "es/esm/index.js",
-  "typings": "types/index.d.ts",
+  "unpkg": "dist/index.min.js",
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
   "files": [
     "es",
     "lib",
-    "dist",
-    "types"
+    "dist"
   ],
   "scripts": {
     "build": "rollup -c"
   },
   "dependencies": {
+    "@formily/antd": "^2.3.3",
+    "@formily/core": "^2.3.3",
+    "@formily/react": "^2.3.3",
     "antd": "^5.24.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"

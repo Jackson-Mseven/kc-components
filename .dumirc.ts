@@ -5,4 +5,7 @@ export default defineConfig({
   themeConfig: {
     name: 'kc',
   },
+  resolve: {
+    atomDirs: [{ type: 'component', dir: 'packages/basic/src' }],
+  },
 });
