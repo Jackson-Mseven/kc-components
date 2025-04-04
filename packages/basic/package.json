@@ -27,9 +27,7 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "@formily/antd": "^2.3.3",
-    "@formily/core": "^2.3.3",
-    "@formily/react": "^2.3.3",
+    "@ant-design/icons": "^6.0.0",
     "antd": "^5.24.5",
     "react": "catalog:",
     "react-dom": "catalog:"
