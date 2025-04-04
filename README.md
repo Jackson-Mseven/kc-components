@@ -1,7 +1,7 @@
 # kc-components
 
-[![NPM version](https://img.shields.io/npm/v/kc-components.svg?style=flat)](https://npmjs.org/package/kc-components)
-[![NPM downloads](http://img.shields.io/npm/dm/kc-components.svg?style=flat)](https://npmjs.org/package/kc-components)
+[![NPM version](https://img.shields.io/npm/v/kc-components.svg?style=flat)](https://npmjs.org/package/@kc-components/basic)
+[![NPM downloads](http://img.shields.io/npm/dm/kc-components.svg?style=flat)](https://npmjs.org/package/@kc-components/basic)
 
 A components based on antd
 
