@@ -18,6 +18,7 @@ import {
 } from 'antd';
 import type { ComponentType } from 'react';
 import JsonSchemaAutoComplete from './JsonSchemaAutoComplete';
+import JsonSchemaCustom from './JsonSchemaCustom';
 import { JsonSchemaFormItemType } from './type';
 
 export const RENDER_MAP: Record<JsonSchemaFormItemType, ComponentType<any>> = {
@@ -49,4 +50,6 @@ export const RENDER_MAP: Record<JsonSchemaFormItemType, ComponentType<any>> = {
   // upload
   upload: Upload,
   dragger: Upload.Dragger,
+  // custom
+  custom: JsonSchemaCustom,
 };

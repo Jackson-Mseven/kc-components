@@ -53,7 +53,9 @@ export type JsonSchemaFormItemType =
   | 'colorPicker'
   // upload
   | 'upload'
-  | 'dragger';
+  | 'dragger'
+  // custom
+  | 'custom';
 
 export type filterCustomProps<T> = Omit<T, 'onChange'>;
 
@@ -211,6 +213,19 @@ interface DraggerJsonSchemaFormItem
   $type: 'dragger';
 }
 
+interface CustomJsonSchemaFormItemProps {
+  id?: string;
+  value?: any;
+  onChange?: (value: any) => void;
+}
+
+export interface CustomJsonSchemaFormItem
+  extends Omit<BaseJsonSchemaFormItem, 'onChange'>,
+    CustomJsonSchemaFormItemProps {
+  $type: 'custom';
+  customRender: (props: CustomJsonSchemaFormItemProps) => React.ReactNode;
+}
+
 // 使用联合类型来表示 JsonSchemaFormItem
 export type JsonSchemaFormItem =
   // input
@@ -240,7 +255,9 @@ export type JsonSchemaFormItem =
   | ColorPickerJsonSchemaFormItem
   // upload
   | UploadJsonSchemaFormItem
-  | DraggerJsonSchemaFormItem;
+  | DraggerJsonSchemaFormItem
+  // custom
+  | CustomJsonSchemaFormItem;
 
 // 根据 type 获取对应的 JsonSchemaFormItem 类型
 export type JsonSchemaFormItemByType<T extends JsonSchemaFormItemType> =

@@ -1,5 +1,7 @@
 # JsonSchemaForm
 
+## 基本用法
+
 ```tsx
 import { InboxOutlined, UploadOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
@@ -300,6 +302,59 @@ const schema: JsonSchemaFormItem[] = [
         </p>
       </>
     ),
+  },
+];
+
+export default () => {
+  return (
+    <JsonSchemaForm
+      schema={schema}
+      formProps={{
+        onFinish(values) {
+          console.log('values---', values);
+        },
+      }}
+    />
+  );
+};
+```
+
+## 自定义组件
+
+```tsx
+import { Input } from 'antd';
+import { JsonSchemaForm } from '@kc-components/basic';
+import { JsonSchemaFormItem } from '@kc-components/basic/JsonSchemaForm/type';
+
+const schema: JsonSchemaFormItem[] = [
+  {
+    $type: 'input',
+    formItemProps: {
+      label: '用户名',
+      name: 'username',
+    },
+    placeholder: '请输入用户名',
+  },
+  {
+    $type: 'custom',
+    formItemProps: {
+      label: '密码',
+      name: 'password',
+      initialValue: '123',
+    },
+    customRender: (props) => {
+      return (
+        <>
+          <Input
+            value={props.value}
+            onChange={props.onChange}
+            placeholder="请输入密码"
+            defaultValue={props.value}
+          />
+          <div>{props.value}</div>
+        </>
+      );
+    },
   },
 ];
 
