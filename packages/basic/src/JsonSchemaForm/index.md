@@ -6,6 +6,7 @@
 import { InboxOutlined, UploadOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 import { JsonSchemaForm } from '@kc-components/basic';
+import { JsonSchemaFormItem } from '@kc-components/basic/JsonSchemaForm/type';
 
 const schema: JsonSchemaFormItem[] = [
   {

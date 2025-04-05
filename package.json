@@ -4,7 +4,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "dumi dev",
-    "build": "lerna run build",
+    "build": "pnpm clean:dist && lerna run build",
     "docs:build": "dumi build",
     "docs:preview": "dumi preview",
     "prepare": "husky install && dumi setup",

@@ -22,10 +22,11 @@
     "allowSyntheticDefaultImports": true,
 
     "sourceMap": true,
-    "inlineSources": true
+    "inlineSources": true,
+    "importHelpers": false
   },
 
   /* 文件范围控制 */
-  "include": ["src/**/*.ts", "src/**/*.tsx", "types/**/*.d.ts"],
-  "exclude": ["node_modules", "dist", "es", "lib", "**/__tests__/*"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "es", "lib"]
 }
