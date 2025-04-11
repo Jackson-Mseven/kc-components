@@ -17,11 +17,15 @@ import {
   Upload,
 } from 'antd';
 import type { ComponentType } from 'react';
-import JsonSchemaAutoComplete from './JsonSchemaAutoComplete';
-import JsonSchemaCustom from './JsonSchemaCustom';
-import { JsonSchemaFormItemType } from './type';
+import JsonSchemaAutoComplete from './components/JsonSchemaAutoComplete';
+import JsonSchemaCustom from './components/JsonSchemaCustom';
+import JsonSchemaNested from './components/JsonSchemaNested';
+import { JsonSchemaFormItemTypeType } from './type';
 
-export const RENDER_MAP: Record<JsonSchemaFormItemType, ComponentType<any>> = {
+export const RENDER_MAP: Record<
+  JsonSchemaFormItemTypeType,
+  ComponentType<any>
+> = {
   // input
   input: Input,
   password: Input.Password,
@@ -52,4 +56,6 @@ export const RENDER_MAP: Record<JsonSchemaFormItemType, ComponentType<any>> = {
   dragger: Upload.Dragger,
   // custom
   custom: JsonSchemaCustom,
+  // nest
+  nest: JsonSchemaNested,
 };

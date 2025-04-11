@@ -25,7 +25,7 @@ import { OTPProps } from 'antd/es/input/OTP';
 import { SliderProps } from 'antd/es/slider';
 import { Dispatch, SetStateAction } from 'react';
 
-export type JsonSchemaFormItemType =
+export type JsonSchemaFormItemTypeType =
   // input
   | 'input'
   | 'password'
@@ -55,7 +55,9 @@ export type JsonSchemaFormItemType =
   | 'upload'
   | 'dragger'
   // custom
-  | 'custom';
+  | 'custom'
+  // nest
+  | 'nest';
 
 export type filterCustomProps<T> = Omit<T, 'onChange'>;
 
@@ -219,15 +221,25 @@ interface CustomJsonSchemaFormItemProps {
   onChange?: (value: any) => void;
 }
 
+type customRenderType = (
+  props: CustomJsonSchemaFormItemProps,
+) => React.ReactNode;
+
 export interface CustomJsonSchemaFormItem
   extends Omit<BaseJsonSchemaFormItem, 'onChange'>,
     CustomJsonSchemaFormItemProps {
   $type: 'custom';
-  customRender: (props: CustomJsonSchemaFormItemProps) => React.ReactNode;
+  customRender: customRenderType;
 }
 
-// 使用联合类型来表示 JsonSchemaFormItem
-export type JsonSchemaFormItem =
+export interface NestedJsonSchemaFormItem
+  extends Omit<BaseJsonSchemaFormItem, 'onChange'>,
+    CustomJsonSchemaFormItemProps {
+  $type: 'nest';
+  nestedRender: JsonSchemaFormItemType[];
+}
+
+export type JsonSchemaFormItemType =
   // input
   | InputJsonSchemaFormItem
   | InputPasswordJsonSchemaFormItem
@@ -257,13 +269,11 @@ export type JsonSchemaFormItem =
   | UploadJsonSchemaFormItem
   | DraggerJsonSchemaFormItem
   // custom
-  | CustomJsonSchemaFormItem;
-
-// 根据 type 获取对应的 JsonSchemaFormItem 类型
-export type JsonSchemaFormItemByType<T extends JsonSchemaFormItemType> =
-  Extract<JsonSchemaFormItem, { type: T }>;
+  | CustomJsonSchemaFormItem
+  // nest
+  | NestedJsonSchemaFormItem;
 
 export interface JsonSchemaFormProps {
-  schema: JsonSchemaFormItem[];
+  schema: JsonSchemaFormItemType[];
   formProps?: FormProps;
 }

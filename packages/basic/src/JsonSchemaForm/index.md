@@ -5,10 +5,9 @@
 ```tsx
 import { InboxOutlined, UploadOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
-import { JsonSchemaForm } from '@kc-components/basic';
-import { JsonSchemaFormItem } from '@kc-components/basic/JsonSchemaForm/type';
+import { JsonSchemaForm, JsonSchemaFormItemType } from '@kc-components/basic';
 
-const schema: JsonSchemaFormItem[] = [
+const schema: JsonSchemaFormItemType[] = [
   {
     $type: 'segmented',
     formItemProps: {
@@ -324,10 +323,9 @@ export default () => {
 
 ```tsx
 import { Input } from 'antd';
-import { JsonSchemaForm } from '@kc-components/basic';
-import { JsonSchemaFormItem } from '@kc-components/basic/JsonSchemaForm/type';
+import { JsonSchemaForm, JsonSchemaFormItemType } from '@kc-components/basic';
 
-const schema: JsonSchemaFormItem[] = [
+const schema: JsonSchemaFormItemType[] = [
   {
     $type: 'input',
     formItemProps: {
@@ -341,21 +339,67 @@ const schema: JsonSchemaFormItem[] = [
     formItemProps: {
       label: '密码',
       name: 'password',
-      initialValue: '123',
     },
+    placeholder: '请输入密码',
     customRender: (props) => {
       return (
         <>
-          <Input
+          <Input.Password
             value={props.value}
             onChange={props.onChange}
             placeholder="请输入密码"
             defaultValue={props.value}
           />
-          <div>{props.value}</div>
+          <div>密码是：{props.value}</div>
         </>
       );
     },
+  },
+];
+
+export default () => {
+  return (
+    <JsonSchemaForm
+      schema={schema}
+      formProps={{
+        onFinish(values) {
+          console.log('values---', values);
+        },
+      }}
+    />
+  );
+};
+```
+
+## 嵌套组件
+
+```tsx
+import { JsonSchemaForm, JsonSchemaFormItemType } from '@kc-components/basic';
+
+const schema: JsonSchemaFormItemType[] = [
+  {
+    $type: 'nest',
+    formItemProps: {
+      label: '用户信息',
+    },
+    nestedRender: [
+      {
+        $type: 'input',
+        formItemProps: {
+          label: '姓名',
+          name: 'name',
+        },
+        placeholder: '请输入姓名',
+      },
+      {
+        $type: 'input',
+        formItemProps: {
+          label: '年龄',
+          name: 'age',
+        },
+        placeholder: '请输入年龄',
+      },
+    ],
   },
 ];
 

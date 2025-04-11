@@ -1,5 +1,5 @@
 import JsonSchemaForm from './JsonSchemaForm';
 
-export type { JsonSchemaFormItem } from './type';
+export type { JsonSchemaFormItemType } from './type';
 
 export default JsonSchemaForm;

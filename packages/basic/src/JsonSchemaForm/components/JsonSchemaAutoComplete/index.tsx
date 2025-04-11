@@ -1,7 +1,7 @@
 import { AutoComplete } from 'antd';
 import { AutoCompleteProps } from 'antd/es/auto-complete';
 import { Dispatch, SetStateAction, useCallback, useState } from 'react';
-import { AutoCompleteJsonSchemaFormItem, filterCustomProps } from '../type';
+import { AutoCompleteJsonSchemaFormItem, filterCustomProps } from '../../type';
 
 interface JsonSchemaAutoCompleteProps
   extends Omit<filterCustomProps<AutoCompleteProps>, 'onSearch'> {
