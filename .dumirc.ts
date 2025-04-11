@@ -4,7 +4,7 @@ import path from 'path';
 export default defineConfig({
   outputPath: 'docs-dist',
   themeConfig: {
-    name: 'kc',
+    logo: '/logo.webp',
   },
   resolve: {
     atomDirs: [
