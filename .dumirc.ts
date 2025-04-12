@@ -2,9 +2,12 @@ import { defineConfig } from 'dumi';
 import path from 'path';
 
 export default defineConfig({
-  outputPath: 'docs-dist',
   themeConfig: {
     logo: '/logo.webp',
+    footer: 'Copyright © 2025 Kincy',
+    socialLinks: {
+      github: 'https://github.com/Jackson-Mseven/kc-components',
+    },
   },
   resolve: {
     atomDirs: [

@@ -4,4 +4,20 @@ nav:
   order: 0
 ---
 
-# 组件总览
+# 快速开始
+
+:::code-group
+
+```bash [npm]
+npm install @kc-components
+```
+
+```bash [yarn]
+yarn add @kc-components
+```
+
+```bash [pnpm]
+pnpm add @kc-components
+```
+
+:::

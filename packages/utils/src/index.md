@@ -4,4 +4,20 @@ nav:
   order: 2
 ---
 
-# 工具总览
+# 快速开始
+
+:::code-group
+
+```bash [npm]
+npm install @kc-utils
+```
+
+```bash [yarn]
+yarn add @kc-utils
+```
+
+```bash [pnpm]
+pnpm add @kc-utils
+```
+
+:::

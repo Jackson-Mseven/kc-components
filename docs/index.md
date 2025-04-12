@@ -1,22 +1,17 @@
 ---
 hero:
-  title: library
-  description: A components based on antd
+  title: kc-components
+  description: 基于 antd 二次封装的组件库
   actions:
-    - text: Hello
-      link: /
-    - text: World
-      link: /
+    - text: 基础组件
+      link: /basics
+    - text: 工具
+      link: /utils
 features:
-  - title: Hello
-    emoji: 💎
-    description: Put hello description here
-  - title: World
+  - title: 基础组件
     emoji: 🌈
-    description: Put world description here
-  - title: '!'
+    description: 基于 antd 二次封装的基础组件
+  - title: 工具
     emoji: 🚀
-    description: Put ! description here
+    description: 组件库的工具集合
 ---
-
-kc-components
