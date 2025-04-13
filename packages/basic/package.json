@@ -27,7 +27,8 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "@ant-design/icons": "^6.0.0"
+    "@ant-design/icons": "^6.0.0",
+    "@kc-components/utils": "workspace:*"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.26.9",

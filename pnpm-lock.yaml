@@ -83,6 +83,9 @@ importers:
       '@ant-design/icons':
         specifier: ^6.0.0
         version: 6.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@kc-components/utils':
+        specifier: workspace:*
+        version: link:../utils
       antd:
         specifier: 'catalog:'
         version: 5.24.5(moment@2.30.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)

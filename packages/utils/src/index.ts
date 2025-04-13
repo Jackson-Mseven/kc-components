@@ -1,2 +1,2 @@
-import isString from './isString';
-export { isString };
+import checkType from './checkType';
+export { checkType };

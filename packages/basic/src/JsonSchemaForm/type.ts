@@ -273,7 +273,10 @@ export type JsonSchemaFormItemType =
   // nest
   | NestedJsonSchemaFormItem;
 
+type Submitter = boolean | ((doms: React.ReactNode[]) => React.ReactNode[]);
+
 export interface JsonSchemaFormProps {
   schema: JsonSchemaFormItemType[];
   formProps?: FormProps;
+  submitter?: Submitter;
 }

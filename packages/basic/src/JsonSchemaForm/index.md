@@ -416,3 +416,38 @@ export default () => {
   );
 };
 ```
+
+## 自定义 submitter
+
+```tsx
+import { Button } from 'antd';
+import { JsonSchemaForm, JsonSchemaFormItemType } from '@kc-components/basic';
+
+const schema: JsonSchemaFormItemType[] = [
+  {
+    $type: 'input',
+    formItemProps: {
+      label: '用户名',
+      name: 'username',
+    },
+  },
+];
+
+export default () => {
+  return (
+    <JsonSchemaForm
+      schema={schema}
+      formProps={{
+        onFinish(values) {
+          console.log('values---', values);
+        },
+      }}
+      submitter={(doms) => [
+        ...doms,
+        <Button>新增</Button>,
+        <Button>返回</Button>,
+      ]}
+    />
+  );
+};
+```
