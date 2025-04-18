@@ -2,3 +2,7 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx lint-staged
+if [ -z "$(git diff --cached --name-only .changeset/)" ]; then
+  echo "错误：必须创建 Changeset 文件！"
+  exit 1
+fi

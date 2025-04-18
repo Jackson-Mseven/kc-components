@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+pnpm changeset status | grep "No changesets present"
+if [ $? -eq 0 ]; then
+  echo "错误：存在未处理的 Changeset 文件！"
+  exit 1
+fi
