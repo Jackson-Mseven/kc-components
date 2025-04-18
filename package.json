@@ -15,7 +15,13 @@
     "clean": "lerna clean --yes",
     "clean:dist": "lerna exec -- rm -rf dist es lib",
     "lv": "lerna version",
-    "lp": "lerna publish from-git"
+    "lp": "lerna publish from-git",
+    "cs:add": "pnpm changeset add",
+    "cs:version": "pnpm changeset version",
+    "cs:publish": "pnpm changeset publish",
+    "cs:status": "pnpm changeset status",
+    "cs:preEnter": "pnpm changeset pre enter beta",
+    "cs:preExit": "pnpm changeset pre exit"
   },
   "commitlint": {
     "extends": [
